@@ -23,6 +23,7 @@ RUN cd / && \
     wget -P /archivesspace/lib https://repo1.maven.org/maven2/com/openhtmltopdf/openhtmltopdf-pdfbox/1.0.10/openhtmltopdf-pdfbox-1.0.10.jar && \
     wget -P /archivesspace/lib https://repo1.maven.org/maven2/de/rototor/pdfbox/graphics2d/0.34/graphics2d-0.34.jar && \
     wget -P /archivesspace/lib https://repo1.maven.org/maven2/org/apache/pdfbox/pdfbox/2.0.26/pdfbox-2.0.26.jar && \
+    wget -P /archivesspace/lib https://repo1.maven.org/maven2/org/apache/pdfbox/xmpbox/2.0.26/xmpbox-2.0.26.jar && \
     wget -P /archivesspace/lib https://repo1.maven.org/maven2/org/jfree/jfreechart/1.5.3/jfreechart-1.5.3.jar && \
     wget -P /archivesspace/lib https://repo1.maven.org/maven2/org/freemarker/freemarker/2.3.27-incubating/freemarker-2.3.27-incubating.jar && \
     wget -P /archivesspace/lib https://repo1.maven.org/maven2/org/apache/servicemix/bundles/org.apache.servicemix.bundles.rhino/1.7.10_1/org.apache.servicemix.bundles.rhino-1.7.10_1-sources.jar && \
@@ -60,7 +61,7 @@ RUN DEBIAN_FRONTEND=non-interactive && \
     rm -rf /var/lib/apt/lists/* && \
     groupadd -g 509 aspace && \
     useradd -l -s /bin/bash -m -u 509 -g aspace aspace &&  \
-    chown -R aspace:aspace /archivesspace && \ 
+    chown -R aspace:aspace /archivesspace && \
     chown -R aspace:aspace /logs
     # chown -R aspace:aspace /logs && \
     # chmod 775 /archivesspace/healthcheck.sh && \
